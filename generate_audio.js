@@ -7,29 +7,37 @@
  * Writes: public/assets/audio/*.mp3
  *         src/utils/audioMap.js  (auto-generated, do NOT edit manually)
  */
-
-import fs   from 'fs';
+import fs from 'fs';
 import path from 'path';
 import https from 'https';
 import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT      = path.resolve(__dirname, '..');
-
-// ── Load API key from .env.local ─────────────────────────────────────────────
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const ROOT = __dirname;
 function loadEnv() {
-  const envPath = path.join(ROOT, '.env.local');
-  if (!fs.existsSync(envPath)) throw new Error('Missing .env.local');
-  const lines = fs.readFileSync(envPath, 'utf8').split('\n');
-  for (const line of lines) {
-    const [k, ...rest] = line.split('=');
-    if (k?.trim() === 'VITE_ELEVENLABS_API_KEY') return rest.join('=').trim();
+  const envPath = path.join(__dirname, '.env.local');
+
+  console.log(envPath);
+
+  if (!fs.existsSync(envPath)) {
+    throw new Error('Missing .env.local');
   }
-  throw new Error('VITE_ELEVENLABS_API_KEY not found in .env.local');
+
+  const envFile = fs.readFileSync(envPath, 'utf8');
+
+  const match = envFile.match(/VITE_ELEVENLABS_API_KEY=(.*)/);
+
+  if (!match) {
+    throw new Error('API key not found');
+  }
+
+  return match[1].trim();
 }
 
-const API_KEY  = loadEnv();
-const VOICE_ID = 'Xb7hH8MSUJpSbSDYk0k2';
+const API_KEY = loadEnv();
+
+console.log(API_KEY);const VOICE_ID = 'Xb7hH8MSUJpSbSDYk0k2';
 const MODEL_ID = 'eleven_multilingual_v2';
 
 const VOICE_SETTINGS = {
