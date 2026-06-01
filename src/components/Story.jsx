@@ -5,6 +5,11 @@ import { Mascot, PhaseNav, ProgressBar } from './SharedUI.jsx';
 import { narrate, stopNarration } from '../utils/audio.js';
 import { getStoryNarration } from '../utils/narration.js';
 
+import Slide0Image from '../../images 1.png';
+import Slide1Image from '../../images 2.png';
+import Slide2Image from '../../images 3.png';
+import Slide3Image from '../../images 4.png';
+
 const SLIDES = [
   {
     title:   "Alex's Stamps",
@@ -14,6 +19,7 @@ const SLIDES = [
     question: '"Who has more stamps?"',
     mascot:  "Let's help Alex! 🗂️",
     nums:    [134, 165],
+    image:   Slide0Image,
   },
   {
     title:   'The Number Line Map',
@@ -24,6 +30,7 @@ const SLIDES = [
     mascot:  'Look at the number line! 👀',
     nums:    [134, 165],
     showLine: true,
+    image:   Slide1Image,
   },
   {
     title:   'Ascending Order',
@@ -33,6 +40,7 @@ const SLIDES = [
     question: '"What is the correct order?"',
     mascot:  'Smallest first! ⬆️',
     nums:    [98, 134, 165],
+    image:   Slide2Image,
   },
   {
     title:   'The Winner!',
@@ -43,6 +51,7 @@ const SLIDES = [
     mascot:  'The number line wins! 🏆',
     nums:    [98, 134, 165],
     showLT:  true,
+    image:   Slide3Image,
   },
 ];
 
@@ -81,6 +90,20 @@ function SlideScene({ slide }) {
       textAlign:     'center',
     }}>
       <div style={{ fontSize: 40 }}>{s.emoji}</div>
+      {s.image && (
+        <img
+          src={s.image}
+          alt={s.title}
+          style={{
+            width: '100%',
+            maxWidth: 420,
+            borderRadius: 16,
+            border: `1px solid ${s.color}55`,
+            background: '#ffffff',
+            boxShadow: '0 10px 24px rgba(0,0,0,0.12)',
+          }}
+        />
+      )}
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
         {s.nums.map((n, i) => (
           <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
