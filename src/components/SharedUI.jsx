@@ -186,7 +186,7 @@ export function XPBar() {
 export function HomeButton() {
   const { goPhase } = useGame();
   return (
-    <div style={{ position: 'fixed', top: 14, left: 68, zIndex: 100 }}>
+    <div style={{ position: 'fixed', top: 68, left: 14, zIndex: 100 }}>
       <button
         className="btn btn-ghost"
         style={{ fontSize: 12, padding: '7px 13px' }}

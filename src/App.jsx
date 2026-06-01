@@ -31,7 +31,7 @@ function Router() {
 
       <div
         style={{
-          paddingTop: state.phase === "home" ? 20 : 60,
+          paddingTop: state.phase === "home" ? 72 : 60,
           paddingBottom: 48,
           minHeight: "100vh",
         }}
