@@ -112,7 +112,15 @@ export function simulateStationComplete() {
 
 // ── Play ─────────────────────────────────────────────────────────────────────
 export function playQuestionNarration(questionText) {
-  return [ask(questionText)];
+  // Split question text into numeric tokens and surrounding text so
+  // pre-generated number audio (1..200) can be reused for consistent voice.
+  const parts = questionText.split(/(\d+)/).filter(Boolean);
+  return parts.map(part => {
+    if (/^\d+$/.test(part)) {
+      return ({ text: part, style: 'statement' });
+    }
+    return ({ text: part, style: 'question' });
+  });
 }
 
 export function playCorrectNarration() {

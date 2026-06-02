@@ -111,6 +111,32 @@ const phrases = [
   { text: "Brilliant work today! You are a true number explorer!", style: 'celebration' },
 ];
 
+// Pre-generate spoken numbers (1..200) to ensure Play-phase questions
+// use the same offline voice for numeric tokens.
+for (let n = 1; n <= 200; n++) {
+  phrases.push({ text: String(n), style: 'statement' });
+}
+
+// Common dynamic question fragments used by `questionGenerator.js`.
+// Pre-generating these ensures Play-phase questions play entirely from static files.
+const fragments = [
+  'Which symbol goes between ',
+  ' and ',
+  'Arrange these numbers from smallest to largest: ',
+  'Arrange these numbers from largest to smallest: ',
+  'Where does ',
+  ' go on the number line?',
+  'What is 1 more than ',
+  'What is 1 less than ',
+  'What is 10 more than ',
+  'What is 10 less than ',
+  'Fill in the missing number: ',
+  ', ',
+  '___',
+];
+
+for (const f of fragments) phrases.push({ text: f, style: 'question' });
+
 function slugify(text) {
   return text
     .toLowerCase()
