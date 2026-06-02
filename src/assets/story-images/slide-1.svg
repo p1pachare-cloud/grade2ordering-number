@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="title1">
+  <title id="title1">Number line illustration</title>
+  <rect x="10" y="60" width="300" height="18" rx="9" fill="#ddd7ff"/>
+  <line x1="20" y1="69" x2="300" y2="69" stroke="#8b5cf6" stroke-width="3"/>
+  <circle cx="96" cy="69" r="12" fill="#fb923c"/>
+  <text x="96" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">134</text>
+  <circle cx="208" cy="69" r="12" fill="#a78bfa"/>
+  <text x="208" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">165</text>
+  <text x="20" y="42" font-size="18" font-weight="700" fill="#4338ca">100</text>
+  <text x="300" y="42" font-size="18" font-weight="700" fill="#4338ca" text-anchor="end">200</text>
+  <path d="M40 140l40-50 40 50" fill="none" stroke="#a78bfa" stroke-width="12" stroke-linecap="round"/>
+  <path d="M170 140l40-80 40 80" fill="none" stroke="#fb923c" stroke-width="12" stroke-linecap="round"/>
+</svg>

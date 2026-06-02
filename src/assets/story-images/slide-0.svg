@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="title0">
+  <title id="title0">Stamp story illustration</title>
+  <rect x="8" y="30" width="304" height="138" rx="18" fill="#fff7ed" stroke="#fb923c" stroke-width="4"/>
+  <path d="M40 60h240v20H40z" fill="#fde68a"/> 
+  <path d="M40 80h240v84H40z" fill="#fff"/>
+  <circle cx="96" cy="143" r="24" fill="#fdba74"/>
+  <text x="96" y="150" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">134</text>
+  <circle cx="224" cy="143" r="24" fill="#a78bfa"/>
+  <text x="224" y="150" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">165</text>
+  <path d="M70 56l46 28 46-28" fill="none" stroke="#fb923c" stroke-width="6" stroke-linecap="round"/>
+  <path d="M98 62h62" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M93 52l8 0" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>
