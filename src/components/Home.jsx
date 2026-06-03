@@ -33,7 +33,7 @@ export default function Home() {
       {/* Badge */}
       <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} style={{ textAlign: 'center', marginBottom: 8 }}>
         <span style={{ background: 'rgba(255,255,255,0.08)', padding: '4px 14px', borderRadius: 99, fontSize: 12, fontWeight: 700, letterSpacing: 1 }}>
-          ✦ Grade 1 Maths · Singapore Curriculum
+          ✦ Grade 2 Maths
         </span>
       </motion.div>
 
